@@ -1,6 +1,6 @@
 # install docker
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -9,9 +9,9 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-apt-get update
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose python3-pip
-apt-get install wondershaper
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose python3-pip
+sudo apt-get install wondershaper
 pip3 install -r requirements.txt
 # install and initialize couchdb
 docker pull couchdb
