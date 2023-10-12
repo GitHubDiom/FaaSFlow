@@ -16,6 +16,6 @@ EXPOSE 5000
 RUN apt clean
 RUN apt update
 RUN apt install -y iproute2
-RUN pip3 install --no-cache-dir gevent flask requests couchdb redis gipc kafka-python confluent_kafka
+RUN pip3 install --no-cache-dir gevent flask requests couchdb redis gipc kafka-python confluent_kafka -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 CMD ["python3", "/proxy/proxy.py"]

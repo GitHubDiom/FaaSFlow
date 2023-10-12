@@ -1,5 +1,5 @@
 FROM codeless_base
-RUN pip3 install --no-cache-dir tensorflow keras pillow
+RUN pip3 install --no-cache-dir tensorflow keras pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
 COPY config.py /proxy
 RUN mkdir /blocks
 COPY blocks /blocks
