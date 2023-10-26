@@ -20,8 +20,8 @@ def get_ip_address(interface_name):
 
 eth1_ip = get_ip_address('eth1')
 
-if eth1_ip==config.GATEWAY_IP:
-    os.system("bash ../..//scripts/worker_restart.bash")
+if eth1_ip==config.COUCHDB_IP:
+    os.system("cd ../..//scripts; bash db_restart.bash; cd -")
 elif eth1_ip in config.WORKER_ADDRS:
     os.system("bash ../../scripts/worker_restart.bash")
 else: 
